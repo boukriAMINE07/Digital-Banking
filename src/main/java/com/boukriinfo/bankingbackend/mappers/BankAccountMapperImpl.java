@@ -74,4 +74,12 @@ public class BankAccountMapperImpl {
         BeanUtils.copyProperties(accountOperationDTO,accountOperation);
         return accountOperation;
     }
+
+    public DebitDTO fromAccountOperationDebit(CurrentAccount currentAccount){
+        DebitDTO debitDTO=new DebitDTO();
+        BeanUtils.copyProperties(currentAccount,debitDTO);
+        return debitDTO;
+
+    }
+
 }
